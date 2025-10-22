@@ -1,5 +1,7 @@
 # ΛELITIUM
 
+![Security Checks](https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml/badge.svg)
+
 **Enterprise-Grade AI Operations Platform**
 
 AELITIUM is a sophisticated AI orchestration platform designed for strategic decision-making, operational excellence, and competitive intelligence in enterprise environments.
@@ -20,6 +22,7 @@ AELITIUM provides:
 ## 📚 Documentation
 
 - **[Product Preview](AELITIUM_Product_Preview.pdf)** - High-level overview and use cases
+- **[Public API Specification](OpenAPI-Public.json)** - OpenAPI 3.0 spec (health endpoint)
 - **[Security Policy](SECURITY.md)** - Responsible disclosure and security contacts
 - **[License](LICENSE)** - Terms of use
 
