@@ -1,6 +1,14 @@
 # ΛELITIUM
 
-![Security Checks](https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml/badge.svg)
+[![Security Checks](https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml/badge.svg)](https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml)
+[![Last Commit](https://img.shields.io/github/last-commit/aelitium-dev/aelitium-official-public)](https://github.com/aelitium-dev/aelitium-official-public/commits)
+[![Issues](https://img.shields.io/github/issues/aelitium-dev/aelitium-official-public)](https://github.com/aelitium-dev/aelitium-official-public/issues)
+[![PRs](https://img.shields.io/github/issues-pr/aelitium-dev/aelitium-official-public)](https://github.com/aelitium-dev/aelitium-official-public/pulls)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](./LICENSE)
+
+![AI Co-Authored](https://img.shields.io/badge/AI-Co--authored-%23ff9800)
+![EU AI Act Ready](https://img.shields.io/badge/EU%20AI%20Act-ready-%234caf50)
+![GDPR](https://img.shields.io/badge/GDPR-compliant-%232196f3)
 
 **Enterprise-Grade AI Operations Platform**
 
