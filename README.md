@@ -18,7 +18,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/AI_Assisted-Human_Validated-purple?style=for-the-badge" alt="AI Disclosure">
   <img src="https://img.shields.io/badge/EU_AI_Act-Ready-blue?style=for-the-badge" alt="EU AI Act Compliance">
-  <img src="https://img.shields.io/badge/GDPR-Compliant-green?style=for-the-badge" alt="GDPR">
+  <img src="https://img.shields.io/badge/GDPR-Ready-green?style=for-the-badge" alt="GDPR">
   <img src="https://img.shields.io/badge/Sovereign_Mode-Active-black?style=for-the-badge" alt="Sovereign Stack">
 </p>
 
