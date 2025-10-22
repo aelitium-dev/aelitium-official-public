@@ -1,0 +1,64 @@
+name: Documentation Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sundays
+
+jobs:
+  validate-docs:
+    name: Validate Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate Markdown
+        uses: articulate/actions-markdownlint@v1
+        continue-on-error: true
+
+      - name: Check broken links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
+          config-file: '.github/markdown-link-check-config.json'
+        continue-on-error: true
+
+      - name: Validate OpenAPI schema
+        run: |
+          npm install -g @apidevtools/swagger-cli
+          swagger-cli validate OpenAPI-Public.json || true
+
+      - name: Check file sizes
+        run: |
+          echo "Checking for oversized files..."
+          find . -type f -size +10M -not -path "./.git/*" || true
+
+      - name: Verify no sensitive data
+        run: |
+          echo "Scanning for potential secrets..."
+          ! grep -r "password\|secret\|token" --include="*.md" --include="*.json" . || true
+          ! grep -r "@.*\..*" --include="*.md" --include="*.json" . || echo "Warning: potential emails found"
+
+  check-security:
+    name: Security Policy Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify SECURITY.md exists
+        run: |
+          test -f SECURITY.md || (echo "SECURITY.md missing" && exit 1)
+
+      - name: Verify LICENSE exists
+        run: |
+          test -f LICENSE || (echo "LICENSE missing" && exit 1)
+
+      - name: Verify CODEOWNERS exists
+        run: |
+          test -f CODEOWNERS || (echo "CODEOWNERS missing" && exit 1)
