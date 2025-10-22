@@ -1,0 +1,39 @@
+# AELITIUM Public Repository - .gitignore
+
+# Never commit secrets or keys
+*.key
+*.pem
+*.crt
+*.secret
+.env
+.env.*
+!.env.example
+
+# Build artifacts
+node_modules/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary
+*.tmp
+*.temp
+tmp/
+temp/

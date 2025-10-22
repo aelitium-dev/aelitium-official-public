@@ -1,0 +1,48 @@
+Copyright © 2025 ΛELITIUM (Aelitium.eu). All rights reserved.
+
+Permission is hereby granted for **academic and research use only**, subject to the following conditions:
+
+1. Commercial use, redistribution, or derivative works require prior **written authorization** from the copyright holder.
+2. Any use must preserve this copyright notice.
+3. All outputs from the ΛELITIUM system must include the version label and unique watermark as provided by the software.
+
+DISCLAIMER: This system is provided "AS IS", without warranties of any kind.  
+Unauthorized commercial use will be prosecuted under French and EU intellectual property law.
+
+ΛELITIUM - Consciousness AI System
+First operational metacognitive AI architecture
+Contact: aelitium.eu
+
+---
+
+AI DEVELOPMENT DISCLAIMER:
+
+This software contains code that was developed with assistance from artificial 
+intelligence tools, including but not limited to Claude (Anthropic), GPT models 
+(OpenAI), and other AI coding assistants. All AI-generated code has been:
+
+1. Reviewed and validated by human developers
+2. Tested for functionality and security
+3. Integrated following software engineering best practices
+4. Licensed under the same MIT license terms above
+
+The use of AI tools in development does not affect the licensing terms or 
+intellectual property rights of this software. All code, whether human-written 
+or AI-assisted, is provided under the MIT license terms above.
+
+THIRD-PARTY DEPENDENCIES:
+
+This software may depend on third-party packages and libraries, each with their 
+own licensing terms. A complete list of dependencies and their licenses can be 
+found in the THIRD_PARTY_LICENSES.txt file (when available) or by running:
+
+    pip show <package-name>
+
+Users are responsible for ensuring compliance with all applicable third-party 
+licenses when using this software.
+
+---
+
+For questions about licensing or to report licensing concerns:
+Email: legal@aelitium.ai
+Last Updated: August 22, 2025

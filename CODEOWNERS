@@ -1,0 +1,36 @@
+# CODEOWNERS - Require approval for critical changes
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default: all files require review from security team
+*                           @aelitium-dev
+
+# Critical infrastructure
+/infrastructure/**          @aelitium-dev
+/routers/**                 @aelitium-dev
+/services/**                @aelitium-dev
+/repositories/**            @aelitium-dev
+
+# Security and authentication
+/infrastructure/auth/**     @aelitium-dev
+/middleware/**              @aelitium-dev
+
+# Configuration files
+*.yml                       @aelitium-dev
+*.yaml                      @aelitium-dev
+*.ini                       @aelitium-dev
+*.conf                      @aelitium-dev
+*.service                   @aelitium-dev
+
+# Documentation (can be more flexible)
+/docs/**                    @aelitium-dev
+*.md                        @aelitium-dev
+!README.md                  @aelitium-dev
+
+# Frontend (requires review but can be delegated)
+/frontend/**                @aelitium-dev
+
+# Tests (important but less critical)
+/tests/**                   @aelitium-dev
+
+# CI/CD workflows
+/.github/**                 @aelitium-dev
