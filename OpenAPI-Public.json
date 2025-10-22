@@ -1,0 +1,459 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AELITIUM Core",
+    "contact": {
+      "name": "ΛELITIUM Core",
+      "email": "founder@aelitium.eu"
+    },
+    "version": "1.0.0",
+    "description": "\n\n**Note:** This is a public subset of the AELITIUM API. Full API documentation is available under NDA for enterprise customers."
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DailyBriefRequest": {
+        "properties": {
+          "topics": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topics",
+            "description": "Topics to brief on"
+          },
+          "seed": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Seed",
+            "description": "Random seed for reproducibility"
+          }
+        },
+        "type": "object",
+        "title": "DailyBriefRequest",
+        "description": "Daily operational brief request"
+      },
+      "DecisionContext": {
+        "properties": {
+          "request_type": {
+            "type": "string",
+            "title": "Request Type"
+          },
+          "data_classification": {
+            "type": "string",
+            "title": "Data Classification"
+          },
+          "user_preference": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "User Preference"
+          },
+          "system_load": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "System Load"
+          },
+          "compliance_requirements": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Compliance Requirements",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_type",
+          "data_classification"
+        ],
+        "title": "DecisionContext"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Job": {
+        "properties": {
+          "agent": {
+            "type": "string",
+            "title": "Agent"
+          },
+          "payload": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Payload",
+            "default": {}
+          }
+        },
+        "type": "object",
+        "required": [
+          "agent"
+        ],
+        "title": "Job"
+      },
+      "ModeProposal": {
+        "properties": {
+          "suggested_mode": {
+            "type": "string",
+            "title": "Suggested Mode"
+          },
+          "confidence": {
+            "type": "number",
+            "title": "Confidence"
+          },
+          "reasoning": {
+            "type": "string",
+            "title": "Reasoning"
+          },
+          "evidence": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Evidence"
+          },
+          "urgency": {
+            "type": "string",
+            "title": "Urgency"
+          },
+          "auto_approve": {
+            "type": "boolean",
+            "title": "Auto Approve"
+          }
+        },
+        "type": "object",
+        "required": [
+          "suggested_mode",
+          "confidence",
+          "reasoning",
+          "evidence",
+          "urgency",
+          "auto_approve"
+        ],
+        "title": "ModeProposal"
+      },
+      "ProposeRequest": {
+        "properties": {
+          "data_sensitivity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "title": "Data Sensitivity",
+            "default": "medium"
+          },
+          "latency_target_ms": {
+            "type": "integer",
+            "maximum": 5000.0,
+            "minimum": 1.0,
+            "title": "Latency Target Ms",
+            "default": 250
+          },
+          "cost_sensitivity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "title": "Cost Sensitivity",
+            "default": "medium"
+          },
+          "capabilities": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Capabilities"
+          },
+          "capacity_hint": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "normal",
+                  "spike"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Capacity Hint",
+            "default": "normal"
+          }
+        },
+        "type": "object",
+        "title": "ProposeRequest",
+        "description": "Mode proposal request"
+      },
+      "SimParams": {
+        "properties": {
+          "mu": {
+            "type": "number",
+            "title": "Mu",
+            "description": "média"
+          },
+          "sigma": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Sigma",
+            "description": "desvio padrão"
+          },
+          "seed": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Seed",
+            "description": "seed determinístico"
+          }
+        },
+        "type": "object",
+        "required": [
+          "mu",
+          "sigma"
+        ],
+        "title": "SimParams"
+      },
+      "SimulateReq": {
+        "properties": {
+          "hypothesis": {
+            "type": "string",
+            "title": "Hypothesis",
+            "default": "default"
+          },
+          "trials": {
+            "type": "integer",
+            "maximum": 200000.0,
+            "exclusiveMinimum": 1.0,
+            "title": "Trials",
+            "default": 500
+          },
+          "params": {
+            "$ref": "#/components/schemas/SimParams"
+          }
+        },
+        "type": "object",
+        "required": [
+          "params"
+        ],
+        "title": "SimulateReq"
+      },
+      "SimulateRequest": {
+        "properties": {
+          "scenario": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Scenario",
+            "description": "Scenario name"
+          },
+          "steps": {
+            "type": "integer",
+            "maximum": 10000.0,
+            "minimum": 1.0,
+            "title": "Steps",
+            "description": "Number of simulation steps",
+            "default": 1
+          },
+          "seed": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Seed",
+            "description": "Random seed for reproducibility"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scenario"
+        ],
+        "title": "SimulateRequest",
+        "description": "SIGMA simulation request"
+      },
+      "SwitchRequest": {
+        "properties": {
+          "to": {
+            "type": "string",
+            "enum": [
+              "local_first",
+              "cloud",
+              "eth_demo"
+            ],
+            "title": "To"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason",
+            "default": ""
+          },
+          "open_steward_request": {
+            "type": "boolean",
+            "title": "Open Steward Request",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "to"
+        ],
+        "title": "SwitchRequest",
+        "description": "Mode switch request"
+      },
+      "TelemetryEvent": {
+        "properties": {
+          "event_type": {
+            "type": "string",
+            "maxLength": 64,
+            "title": "Event Type"
+          },
+          "payload": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Payload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "event_type"
+        ],
+        "title": "TelemetryEvent"
+      },
+      "ValidateRequest": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Text",
+            "description": "Text to validate"
+          },
+          "criteria": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Criteria",
+            "description": "Criteria to evaluate: clarity, consistency, grounding"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "ValidateRequest",
+        "description": "Metacognitive validation request"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  },
+  "security": []
+}
