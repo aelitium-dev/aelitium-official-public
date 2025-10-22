@@ -1,14 +1,40 @@
 # ΛELITIUM
 
-[![Security Checks](https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml/badge.svg)](https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml)
-[![Last Commit](https://img.shields.io/github/last-commit/aelitium-dev/aelitium-official-public)](https://github.com/aelitium-dev/aelitium-official-public/commits)
-[![Issues](https://img.shields.io/github/issues/aelitium-dev/aelitium-official-public)](https://github.com/aelitium-dev/aelitium-official-public/issues)
-[![PRs](https://img.shields.io/github/issues-pr/aelitium-dev/aelitium-official-public)](https://github.com/aelitium-dev/aelitium-official-public/pulls)
-[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](./LICENSE)
+<!-- Technical Trust Header -->
 
-![AI Co-Authored](https://img.shields.io/badge/AI-Co--authored-%23ff9800)
-![EU AI Act Ready](https://img.shields.io/badge/EU%20AI%20Act-ready-%234caf50)
-![GDPR](https://img.shields.io/badge/GDPR-compliant-%232196f3)
+<p align="center">
+  <img src="https://github.githubassets.com/images/modules/profile/achievements/pull-shark-default.png" height="64" title="Pull Shark — PRs merged">
+  <img src="https://github.githubassets.com/images/modules/profile/achievements/pair-extraordinaire-default.png" height="64" title="Pair Extraordinaire — Coauthored commits">
+</p>
+
+<p align="center">
+  <a href="https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml"><img src="https://github.com/aelitium-dev/aelitium-official-public/actions/workflows/security.yml/badge.svg" alt="Security Checks"></a>
+  <a href="https://github.com/aelitium-dev/aelitium-official-public/commits"><img src="https://img.shields.io/github/last-commit/aelitium-dev/aelitium-official-public" alt="Last Commit"></a>
+  <a href="https://github.com/aelitium-dev/aelitium-official-public/issues"><img src="https://img.shields.io/github/issues/aelitium-dev/aelitium-official-public" alt="Issues"></a>
+  <a href="https://github.com/aelitium-dev/aelitium-official-public/pulls"><img src="https://img.shields.io/github/issues-pr/aelitium-dev/aelitium-official-public" alt="PRs"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-red.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/AI_Assisted-Human_Validated-purple?style=for-the-badge" alt="AI Disclosure">
+  <img src="https://img.shields.io/badge/EU_AI_Act-Ready-blue?style=for-the-badge" alt="EU AI Act Compliance">
+  <img src="https://img.shields.io/badge/GDPR-Compliant-green?style=for-the-badge" alt="GDPR">
+  <img src="https://img.shields.io/badge/Sovereign_Mode-Active-black?style=for-the-badge" alt="Sovereign Stack">
+</p>
+
+---
+
+### 🇫🇷 Transparence & Gouvernance
+
+Le développement de ΛELITIUM intègre des contributions assistées par IA (**Claude Code**), validées manuellement et auditées.
+Tous les commits sont vérifiés et conformes au cadre **EU AI Act (Art. 52–54)** — souveraineté, traçabilité et transparence totale.
+
+### 🇬🇧 Transparency & Governance
+
+ΛELITIUM development includes AI-assisted contributions (**Claude Code**) with full human validation and audit trails.
+All changes are verified, audit-ready, and compliant with the **EU AI Act (Articles 52–54)** — ensuring sovereignty and accountability.
+
+---
 
 **Enterprise-Grade AI Operations Platform**
 
