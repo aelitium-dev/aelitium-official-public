@@ -39,9 +39,7 @@ AELITIUM is built with security-first principles:
 - Comprehensive audit logging
 - Regular security assessments
 
-**Report security vulnerabilities to:** security@aelitium.eu
-
-See [SECURITY.md](SECURITY.md) for detailed disclosure procedures.
+**Report security vulnerabilities:** See [SECURITY.md](SECURITY.md) for secure reporting procedures.
 
 ---
 
@@ -49,10 +47,7 @@ See [SECURITY.md](SECURITY.md) for detailed disclosure procedures.
 
 AELITIUM is available for enterprise customers and strategic partners.
 
-**For inquiries:**
-- **Enterprise Sales:** contact@aelitium.eu
-- **Technical Support:** support@aelitium.eu
-- **Security:** security@aelitium.eu
+**For inquiries:** Visit [aelitium.eu/contact](https://aelitium.eu/contact) for secure communication channels.
 
 ---
 

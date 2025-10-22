@@ -38,4 +38,4 @@ Add any other context, screenshots, or logs about the problem here.
 ## Security Note
 
 **Do not include sensitive information** (API keys, credentials, PII) in public issues.
-For security vulnerabilities, email security@aelitium.eu instead.
+For security vulnerabilities, use GitHub Security Advisory (Security tab → Advisories → New draft).

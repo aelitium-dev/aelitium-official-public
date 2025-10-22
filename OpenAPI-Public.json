@@ -4,7 +4,7 @@
     "title": "AELITIUM Core",
     "contact": {
       "name": "ΛELITIUM Core",
-      "email": "founder@aelitium.eu"
+      "url": "https://aelitium.eu/contact"
     },
     "version": "1.0.0",
     "description": "\n\n**Note:** This is a public subset of the AELITIUM API. Full API documentation is available under NDA for enterprise customers."

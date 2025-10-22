@@ -6,10 +6,11 @@
 
 ### Responsible Disclosure
 
-If you discover a security vulnerability in AELITIUM, please report it to:
+If you discover a security vulnerability in AELITIUM:
 
-**Email:** security@aelitium.eu
-**PGP Key:** Available at https://aelitium.eu/.well-known/pgp-key.txt
+1. **Use GitHub Security Advisory:** Click "Security" → "Advisories" → "New draft security advisory"
+2. **Or use our secure contact form:** https://aelitium.eu/security-report
+3. **PGP Key:** Available at https://aelitium.eu/.well-known/pgp-key.txt (for encrypted communication)
 
 ### What to Include
 
@@ -77,9 +78,9 @@ AELITIUM follows responsible disclosure practices:
 
 ## Security Contacts
 
-- **General Security:** security@aelitium.eu
+- **Report Vulnerabilities:** Use GitHub Security Advisory or https://aelitium.eu/security-report
 - **Emergency Hotline:** Available to enterprise customers under NDA
-- **Bug Bounty Program:** Contact security@aelitium.eu for program details
+- **Bug Bounty Program:** Details at https://aelitium.eu/bug-bounty
 
 ## Code of Conduct
 
