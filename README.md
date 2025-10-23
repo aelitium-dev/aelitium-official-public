@@ -16,6 +16,11 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/aelitium-dev/aelitium-official-public/releases/tag/v2.0.0"><img src="https://img.shields.io/badge/Proof%20Pack-v2.0-blue" alt="Proof Pack v2.0"></a>
+  <a href="https://github.com/aelitium-dev/aelitium-official-public/releases/tag/v2.0.0"><img src="https://img.shields.io/badge/Status-Verified-green" alt="Verified"></a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/AI_Assisted-Human_Validated-purple?style=for-the-badge" alt="AI Disclosure">
   <img src="https://img.shields.io/badge/EU_AI_Act-Ready-blue?style=for-the-badge" alt="EU AI Act Compliance">
   <img src="https://img.shields.io/badge/GDPR-Ready-green?style=for-the-badge" alt="GDPR">
